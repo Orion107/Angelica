@@ -1,0 +1,18 @@
+{
+  "id": "angelica",
+  "name": "Angelica",
+  "author": [
+    "SageSeraph"
+  ],
+  "description": "Balatro mod, made with Jokerforge. Basically just adds random things while I test out and see Jokerforge's development progress :3",
+  "prefix": "angelica",
+  "main_file": "main.lua",
+  "version": "0.0.1",
+  "priority": 0,
+  "badge_colour": "ffee00",
+  "badge_text_colour": "6000FF",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0404a)",
+    "Talisman (>=2.2.0)"
+  ]
+}
