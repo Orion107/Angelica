@@ -4,15 +4,15 @@
   "author": [
     "SageSeraph"
   ],
-  "description": "Balatro mod, made with Jokerforge. Basically just adds random things while I test out and see Jokerforge's development progress :3",
+  "description": "Balatro mod in alpha, made for random things that pop into my mind! Made with Jokerforge, so expect more features to come out over time!\nCurrently adds 9 Jokers, 4 consumables, 2 rarities, 1 booster pack, and 1 enhancement!",
   "prefix": "angelica",
   "main_file": "main.lua",
-  "version": "0.0.1",
-  "priority": 0,
+  "version": "0.0.4",
+  "priority": 666,
   "badge_colour": "ffee00",
   "badge_text_colour": "6000FF",
   "dependencies": [
     "Steamodded (>=1.0.0~BETA-0404a)",
-    "Talisman (>=2.2.0)"
+    "Talisman (>=2.3.0)"
   ]
 }

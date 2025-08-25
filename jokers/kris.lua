@@ -1,35 +1,47 @@
-SMODS.Joker{ --krib
-    name = "krib",
-    key = "kribjok",
+SMODS.Joker{ --Kris
+    key = "kris",
     config = {
         extra = {
-            gold = 0
         }
     },
     loc_txt = {
-        ['name'] = 'krib',
+        ['name'] = 'Kris',
         ['text'] = {
-            [1] = 'ralsei i frew up'
+            [1] = 'Copy {C:red}discarded{} cards to {C:blue}hand{}.',
+            [2] = 'Last {C:red}discard{} creates a {C:dark_edition}Polychrome{} {C:attention}Lucky{} Jack of {C:spades}Spades{} with a random {C:attention}Seal{}.',
+            [3] = '{s:0.75,C:inactive}\"ralsei i frew up\"{}'
+        },
+        ['unlock'] = {
+            [1] = ''
         }
     },
     pos = {
         x = 5,
         y = 0
     },
+    display_size = {
+        w = 71 * 1, 
+        h = 95 * 1
+    },
     cost = 20,
     rarity = 4,
     blueprint_compat = true,
     eternal_compat = true,
+    perishable_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-
-    loc_vars = function(self, info_queue, card)
-        return {vars = {}}
-    end,
+    in_pool = function(self, args)
+          return (
+          not args 
+          or args.source ~= 'sho' 
+          or args.source == 'buf' or args.source == 'jud' or args.source == 'rif' or args.source == 'rta' or args.source == 'sou' or args.source == 'uta' or args.source == 'wra'
+          )
+          and true
+      end,
 
     calculate = function(self, card, context)
-        if context.discard and not context.blueprint then
+        if context.discard  then
                 return {
                     func = function()
                         G.playing_card = (G.playing_card and G.playing_card + 1) or 1
@@ -57,7 +69,7 @@ SMODS.Joker{ --krib
                     message = "your choices dont matter"
                 }
         end
-        if context.pre_discard and not context.blueprint then
+        if context.pre_discard  then
             if G.GAME.current_round.discards_left <= 1 then
                 return {
                     func = function()
@@ -66,7 +78,7 @@ SMODS.Joker{ --krib
                     front = card_front,
                     center = G.P_CENTERS.m_lucky
                 }, G.discard, true, false, nil, true)
-            new_card:set_seal("gold", true)
+            new_card:set_seal(pseudorandom_element({"Gold", "Red", "Blue", "Purple"}, pseudoseed('add_card_hand_seal')), true)
             new_card:set_edition("e_polychrome", true)
                 
                 G.playing_card = (G.playing_card and G.playing_card + 1) or 1
