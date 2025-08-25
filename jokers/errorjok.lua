@@ -1,41 +1,45 @@
 SMODS.Joker{ --ERROR
-    name = "ERROR",
     key = "errorjok",
     config = {
         extra = {
-            Xmult_min = 0.1,
-            Xmult_max = 23
+            emult_min = 1,
+            emult_max = 2.3
         }
     },
     loc_txt = {
         ['name'] = 'ERROR',
         ['text'] = {
-            [1] = '{C:dark_edition}ERRORERRORERRORERROR',
+            [1] = '{C:green}ERRORERRORERRORERROR',
             [2] = 'ERRORERRORERRORERROR',
             [3] = 'ERRORERRORERRORERROR',
             [4] = 'ERRORERRORERRORERROR{}'
+        },
+        ['unlock'] = {
+            [1] = ''
         }
     },
     pos = {
-        x = 4,
+        x = 2,
         y = 0
     },
-    cost = 333,
+    display_size = {
+        w = 71 * 1, 
+        h = 95 * 1
+    },
+    cost = 127,
     rarity = "angelica_angelic",
     blueprint_compat = true,
     eternal_compat = true,
+    perishable_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
 
-    loc_vars = function(self, info_queue, card)
-        return {vars = {}}
-    end,
-
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and not context.blueprint then
+        if context.individual and context.cardarea == G.play  then
                 return {
-                    Xmult = pseudorandom('Xmult_807f7893', card.ability.extra.Xmult_min, card.ability.extra.Xmult_max)
+                    e_mult = pseudorandom('emult_bb29b5c5', card.ability.extra.emult_min, card.ability.extra.emult_max),
+                    message = "ERROR"
                 }
         end
     end

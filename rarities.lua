@@ -3,8 +3,8 @@ SMODS.Rarity {
     pools = {
         ["Joker"] = true
     },
-    default_weight = 0.01,
-    badge_colour = HEX('f8e71c'),
+    default_weight = 0,
+    badge_colour = HEX('fbee58'),
     loc_txt = {
         name = "Angelic"
     },
@@ -14,14 +14,14 @@ SMODS.Rarity {
 }
 
 SMODS.Rarity {
-    key = "bad",
+    key = "seraphic",
     pools = {
         ["Joker"] = true
     },
     default_weight = 0,
-    badge_colour = HEX('5b6d4c'),
+    badge_colour = HEX('ffec00'),
     loc_txt = {
-        name = "Bad"
+        name = "Seraphic"
     },
     get_weight = function(self, weight, object_type)
         return weight
