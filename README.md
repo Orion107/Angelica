@@ -1,5 +1,5 @@
 Angelica, it's a mod! Woa!
-Jokerslop but angel flavored oo fancy
+Jokerslop but angel flavored oo fancy,,,,,
 Balance complaints WILL be ignored, my mod, my rules.
 
 
