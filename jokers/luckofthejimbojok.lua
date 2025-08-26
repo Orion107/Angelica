@@ -17,7 +17,7 @@ SMODS.Joker{ --Luck of the Jimbo
         }
     },
     pos = {
-        x = 6,
+        x = 7,
         y = 0
     },
     display_size = {
@@ -33,7 +33,7 @@ SMODS.Joker{ --Luck of the Jimbo
     discovered = true,
     atlas = 'CustomJokers',
     soul_pos = {
-        x = 7,
+        x = 8,
         y = 0
     },
     in_pool = function(self, args)

@@ -8,8 +8,7 @@ SMODS.Joker{ --Kris
         ['name'] = 'Kris',
         ['text'] = {
             [1] = 'Copy {C:red}discarded{} cards to {C:blue}hand{}.',
-            [2] = 'Last {C:red}discard{} creates a {C:dark_edition}Polychrome{} {C:attention}Lucky{} Jack of {C:spades}Spades{} with a random {C:attention}Seal{}.',
-            [3] = '{s:0.75,C:inactive}\"ralsei i frew up\"{}'
+            [2] = 'Last {C:red}discard{} creates a {C:dark_edition}Polychrome{} {C:attention}Lucky{} Jack of {C:spades}Spades{} with a random {C:attention}Seal{}.'
         },
         ['unlock'] = {
             [1] = ''
@@ -31,6 +30,10 @@ SMODS.Joker{ --Kris
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
+    soul_pos = {
+        x = 6,
+        y = 0
+    },
     in_pool = function(self, args)
           return (
           not args 

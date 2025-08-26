@@ -53,7 +53,7 @@ SMODS.Joker{ --Drag n Drop
                 ,
                     func = function()
                         if SMODS.pseudorandom_probability(card, 'group_0_95571883', 1, card.ability.extra.odds, 'j_angelica_dragndropjok') then
-                      local created_joker = true
+              local created_joker = true
                   G.E_MANAGER:add_event(Event({
                       func = function()
                           local joker_card = SMODS.add_card({ set = 'Joker', rarity = 'angelica_angelic' })
@@ -71,9 +71,9 @@ SMODS.Joker{ --Drag n Drop
                 return true
             end}, card)
                         card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "Dropped!", colour = G.C.RED})
-                  end
+          end
                     if SMODS.pseudorandom_probability(card, 'group_1_43edd851', 1, card.ability.extra.odds2, 'j_angelica_dragndropjok') then
-                      local created_joker = true
+              local created_joker = true
                   G.E_MANAGER:add_event(Event({
                       func = function()
                           local joker_card = SMODS.add_card({ set = 'Joker', rarity = 'Legendary' })
@@ -91,7 +91,7 @@ SMODS.Joker{ --Drag n Drop
                 return true
             end}, card)
                         card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "Dropped!", colour = G.C.RED})
-                  end
+          end
                         return true
                     end
                 }
