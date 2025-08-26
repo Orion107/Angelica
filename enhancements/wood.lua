@@ -19,5 +19,6 @@ SMODS.Enhancement {
     always_scores = true,
     unlocked = true,
     discovered = true,
-    no_collection = false
+    no_collection = false,
+    weight = 5
 }

@@ -7,7 +7,7 @@
   "description": "Balatro mod in alpha, made for random things that pop into my mind! Made with Jokerforge, so expect more features to come out over time!\nCurrently adds 9 Jokers, 4 consumables, 2 rarities, 1 booster pack, and 1 enhancement!",
   "prefix": "angelica",
   "main_file": "main.lua",
-  "version": "0.0.4",
+  "version": "0.0.4~rev1",
   "priority": 666,
   "badge_colour": "ffee00",
   "badge_text_colour": "6000FF",

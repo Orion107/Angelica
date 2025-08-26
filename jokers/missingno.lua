@@ -16,7 +16,7 @@ SMODS.Joker{ --MissingNo.
         }
     },
     pos = {
-        x = 8,
+        x = 9,
         y = 0
     },
     display_size = {
@@ -32,8 +32,8 @@ SMODS.Joker{ --MissingNo.
     discovered = true,
     atlas = 'CustomJokers',
     soul_pos = {
-        x = 9,
-        y = 0
+        x = 0,
+        y = 1
     },
     in_pool = function(self, args)
           return (

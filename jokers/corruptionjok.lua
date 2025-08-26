@@ -58,7 +58,7 @@ SMODS.Joker{ --Corruption
                 ,
                     func = function()
                         if SMODS.pseudorandom_probability(card, 'group_0_e65ed9ba', 1, card.ability.extra.odds, 'j_angelica_corruptionjok') then
-                      local destructable_jokers = {}
+              local destructable_jokers = {}
                 for i, joker in ipairs(G.jokers.cards) do
                     if joker ~= card and not joker.ability.eternal and not joker.getting_sliced then
                         table.insert(destructable_jokers, joker)
@@ -77,7 +77,7 @@ SMODS.Joker{ --Corruption
                     card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "Corrupted!", colour = G.C.RED})
                 end
                         
-                  end
+          end
                         return true
                     end
                 }

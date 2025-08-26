@@ -18,7 +18,7 @@ SMODS.Joker{ --SageSeraph
         }
     },
     pos = {
-        x = 0,
+        x = 1,
         y = 1
     },
     display_size = {
@@ -33,6 +33,10 @@ SMODS.Joker{ --SageSeraph
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
+    soul_pos = {
+        x = 2,
+        y = 1
+    },
     in_pool = function(self, args)
           return (
           not args 
