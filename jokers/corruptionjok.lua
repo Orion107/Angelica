@@ -57,7 +57,7 @@ SMODS.Joker{ --Corruption
                         }
                 ,
                     func = function()
-                        if SMODS.pseudorandom_probability(card, 'group_0_e65ed9ba', 1, card.ability.extra.odds, 'j_angelica_corruptionjok') then
+                        if SMODS.pseudorandom_probability(card, 'group_0_e65ed9ba', 1, card.ability.extra.odds, 'j_angelica_corruptionjok', false) then
               local destructable_jokers = {}
                 for i, joker in ipairs(G.jokers.cards) do
                     if joker ~= card and not joker.ability.eternal and not joker.getting_sliced then

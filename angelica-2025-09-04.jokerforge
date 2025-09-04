@@ -8,7 +8,7 @@
     "description": "Balatro mod in alpha, made for random things that pop into my mind! Made with Jokerforge, so expect more features to come out over time!\nCurrently adds 9 Jokers, 4 consumables, 2 rarities, 1 booster pack, and 1 enhancement!",
     "prefix": "angelica",
     "main_file": "main.lua",
-    "version": "0.0.4~rev1",
+    "version": "0.0.4~rev2",
     "priority": 666,
     "badge_colour": "ffee00",
     "badge_text_colour": "6000FF",
@@ -1043,7 +1043,26 @@
       "collection_name": "Heavenly Cards"
     }
   ],
-  "boosters": [],
+  "boosters": [
+    {
+      "id": "bc4ea261-9b76-4130-8e95-6d74a3f269d1",
+      "name": "Heavenly Pack",
+      "description": "Choose 1 of 2 {C:money}Heavenly{} Cards.",
+      "imagePreview": "/images/placeholderboosters/placeholder-booster-3.png",
+      "cost": 7,
+      "weight": 0.05,
+      "draw_hand": false,
+      "booster_type": "consumable",
+      "config": {
+        "extra": 2,
+        "choose": 1
+      },
+      "card_rules": [],
+      "discovered": true,
+      "placeholderCreditIndex": 3,
+      "boosterKey": "heavenly_pack"
+    }
+  ],
   "enhancements": [
     {
       "id": "2669ede1-f798-441b-8c17-8ed6de3c9c31",
@@ -1141,6 +1160,48 @@
       "hasUserUploadedImage": false
     }
   ],
+  "editions": [
+    {
+      "id": "8ed9b0be-5de8-4410-aeb2-b10927a0ba6c",
+      "name": "Boosted",
+      "description": "{X:blue,C:white}x1.5{} Chips when scored.",
+      "editionKey": "boosted",
+      "shader": "booster",
+      "unlocked": true,
+      "discovered": true,
+      "no_collection": false,
+      "in_shop": false,
+      "weight": 0.001,
+      "extra_cost": 2,
+      "apply_to_float": false,
+      "badge_colour": "#FFAA00",
+      "sound": "foil1",
+      "disable_shadow": false,
+      "disable_base_shader": false,
+      "rules": [
+        {
+          "id": "6a703e92-6b0d-473a-96f2-a1b32d255b3e",
+          "trigger": "card_scored",
+          "blueprintCompatible": true,
+          "conditionGroups": [],
+          "effects": [
+            {
+              "id": "15f1b7fb-05c8-4e16-8f87-8bd56e974c36",
+              "type": "add_x_chips",
+              "params": {
+                "value": 1.5
+              }
+            }
+          ],
+          "randomGroups": [],
+          "position": {
+            "x": 1040,
+            "y": 374
+          }
+        }
+      ]
+    }
+  ],
   "version": "1.0.0",
-  "exportedAt": "2025-08-26T22:17:10.469Z"
+  "exportedAt": "2025-09-04T05:47:53.454Z"
 }
