@@ -23,6 +23,14 @@ SMODS.Atlas({
 }):register()
 
 SMODS.Atlas({
+    key = "CustomBoosters", 
+    path = "CustomBoosters.png", 
+    px = 71,
+    py = 95, 
+    atlas_table = "ASSET_ATLAS"
+}):register()
+
+SMODS.Atlas({
     key = "CustomEnhancements", 
     path = "CustomEnhancements.png", 
     px = 71,
@@ -90,16 +98,35 @@ local function load_seals_folder()
     end
 end
 
+local function load_editions_folder()
+    local mod_path = SMODS.current_mod.path
+    local editions_path = mod_path .. "/editions"
+    local files = NFS.getDirectoryItemsInfo(editions_path)
+    for i = 1, #files do
+        local file_name = files[i].name
+        if file_name:sub(-4) == ".lua" then
+            assert(SMODS.load_file("editions/" .. file_name))()
+        end
+    end
+end
+
 local function load_rarities_file()
     local mod_path = SMODS.current_mod.path
     assert(SMODS.load_file("rarities.lua"))()
 end
 
 load_rarities_file()
+local function load_boosters_file()
+    local mod_path = SMODS.current_mod.path
+    assert(SMODS.load_file("boosters.lua"))()
+end
+
+load_boosters_file()
 load_jokers_folder()
 load_consumables_folder()
 load_enhancements_folder()
 load_seals_folder()
+load_editions_folder()
 SMODS.ObjectType({
     key = "angelica_food",
     cards = {
